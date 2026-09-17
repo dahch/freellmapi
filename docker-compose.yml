@@ -13,7 +13,7 @@ services:
     # Bound to localhost by default — FreeLLMAPI is single-user and must not be
     # exposed to the internet. Set HOST_BIND=0.0.0.0 to reach it from your LAN.
     ports:
-      - "${HOST_BIND:-127.0.0.1}:${PORT:-3001}:3001"
+      - "${HOST_BIND:-127.0.0.1}:${PORT:-3001}:${PORT:-3001}"
     volumes:
       - freellmapi-data:/app/server/data
     # Makes `host.docker.internal` resolve to the host from inside the
