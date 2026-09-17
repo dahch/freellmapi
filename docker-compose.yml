@@ -8,7 +8,8 @@ services:
       - .env
     environment:
       NODE_ENV: production
-      PORT: 3001
+      PORT: ${PORT:-3001}
+      ENCRYPTION_KEY: ${ENCRYPTION_KEY:-}
     # Bound to localhost by default — FreeLLMAPI is single-user and must not be
     # exposed to the internet. Set HOST_BIND=0.0.0.0 to reach it from your LAN.
     ports:
